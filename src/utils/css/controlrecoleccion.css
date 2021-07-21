@@ -1,0 +1,16 @@
+.litros {
+	background-color: red;
+	width: 200px;
+	height: 200px;
+}
+.fechas {
+	background-color: yellow;
+	width: 200px;
+	height: 200px;
+}
+#parteinferior {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+}
