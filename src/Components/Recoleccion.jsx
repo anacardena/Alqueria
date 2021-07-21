@@ -1,9 +1,11 @@
 import React from 'react'
 import '../utils/css/recoleccion.css'
-
+import '../utils/css/estilosglobales.css'
+import logo from '../utils/images/logoalquería.jpg'
 function Recoleccion () {
     return (
-      <h1>recolección de la leche</h1>
+    	 <div id="banner" style={{backgroundImage:`url(${logo})`}}> </div>
+  
     )
 
 }

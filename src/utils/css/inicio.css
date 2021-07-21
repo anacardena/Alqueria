@@ -1,8 +1,7 @@
 .padre_inicio {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin: 5%;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	
 }
 #leche, #ternero{
     width: 60vh;
@@ -13,13 +12,10 @@
 	align-items: center;
 	text-align: center;
 	color: white;
-	margin: 5%;
 }
 #botones {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content:space-between;
 	align-items: center;
 	}
-span {
-	justify-content: center;
-}
