@@ -1,6 +1,6 @@
 import logo from './utils/images/logo.svg';
 import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom' 
 import Recoleccion from "./Components/Recoleccion.jsx"
 import Inicio from "./Components/Inicio.jsx"
 import Registragranja from "./Components/Registragranja.jsx"

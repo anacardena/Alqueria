@@ -4,5 +4,9 @@
 	width: auto;
 	height: 10%;
 	background-color: #CB262A;
-	
+
+}
+@font-face { /* carpeta de fuentes para el tipo de letra*/
+    font-family: "Poppins-Regular.ttf";
+    src: url(../css/Poppins-Regular);
 }

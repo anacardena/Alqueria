@@ -3,7 +3,7 @@ import '../utils/css/recoleccion.css'
 
 function Recoleccion () {
     return (
-      recolección de la leche
+      <h1>recolección de la leche</h1>
     )
 
 }

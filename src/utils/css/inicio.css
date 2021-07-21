@@ -1,0 +1,25 @@
+.padre_inicio {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 5%;
+}
+#leche, #ternero{
+    width: 60vh;
+	height: 20vw;
+    background-repeat: no-repeat;
+	background-size: cover;
+	 justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	margin: 5%;
+}
+#botones {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+span {
+	justify-content: center;
+}
