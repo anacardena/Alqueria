@@ -13,9 +13,12 @@ function Registragranja () {
     	 <Link to="/" class="btn">
              <span><img src={atras} /></span>
              </Link>
+             <h1>aqui se van a registrar las granjas
+             </h1>
          </div>
     )
 
 }
+
 
 export default Registragranja
