@@ -8,11 +8,12 @@ import {Link} from "react-router-dom"
 function Registragranja () {
     return (
     	<div id="padre_registro">
-    	
     	 <div id="banner" style={{backgroundImage:`url(${logo})`}}> </div>
     	 <Link to="/" class="btn">
              <span><img src={atras} /></span>
+
              </Link>
+              <h1> aquí debes hacer el registro de las granjas donde el administrador hace cambios </h1>
          </div>
     )
 

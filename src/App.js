@@ -5,9 +5,16 @@ import Recoleccion from "./Components/Recoleccion.jsx"
 import Inicio from "./Components/Inicio.jsx"
 import Registragranja from "./Components/Registragranja.jsx"
 import Controlrecoleccion from "./Components/Controlrecoleccion.jsx"
+import Auth from "./Components/Auth.jsx"
+import {useFirebaseApp} from 'reactfire';
+
 function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase);
   return (
     <div className="App">
+       <p>Usuario:</p>
+       <Auth />
       <Router>
       <Switch>
       <Route path="/" exact component={Inicio} />

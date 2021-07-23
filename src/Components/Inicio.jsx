@@ -17,6 +17,7 @@ function Inicio() {
              <Link to="/Recoleccion" class="btn">
              <span>Recoleccion</span>
              </Link>
+            
              </div>
              <div style={{backgroundImage:`url(${ternero})`}} id="ternero">
               <Link to="/Registragranja" class="btn">
