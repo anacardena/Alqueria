@@ -1,0 +1,38 @@
+#padre_Auth {
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 6%;
+}
+#login {
+	background-color: white;
+	display: grid;
+	grid-template-rows: auto auto auto;
+}
+#Bienvenido {
+	color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+}
+#contenedor {
+	
+display:grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+#login button {
+   background-color: #3BC37B;
+   color: white;
+   border-radius: 10%;
+   border: none;
+
+}
+input {
+	  border-radius: 3%;
+	  background-color: red;
+	  opacity: 0.4;
+      border:none;
+      margin: 4%;
+}

@@ -6,6 +6,7 @@ import Inicio from "./Components/Inicio.jsx"
 import Registragranja from "./Components/Registragranja.jsx"
 import Controlrecoleccion from "./Components/Controlrecoleccion.jsx"
 import Auth from "./Components/Auth.jsx"
+import Header from "./Components/Header.jsx"
 import {useFirebaseApp} from 'reactfire';
 
 function App() {
@@ -13,12 +14,13 @@ function App() {
   console.log(firebase);
   return (
     <div className="App">
-       <p>Usuario:</p>
-       <Auth />
       <Router>
+      <Header />
       <Switch>
-      <Route path="/" exact component={Inicio} />
+      <Route path="/" exact component={Auth} />
+      <Route path="/Inicio" exact component={Inicio} />
       <Route path="/Recoleccion" exact component={Recoleccion} />
+     /*--{<Route path="/Auth" exact component={Auth} />} */
       <Route path="/Registragranja" exact component={Registragranja} />
       <Route path="/Controlrecoleccion" exact component={Controlrecoleccion} />
       </Switch>
