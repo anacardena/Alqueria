@@ -1,12 +1,16 @@
 .litros {
-	background-color: red;
-	width: 200px;
-	height: 200px;
+	
+	
 }
-.fechas {
+#leche-cantidad{
+background-color: red;
+background-size: contain;
+}
+.datos {
 	background-color: yellow;
-	width: 200px;
-	height: 200px;
+	background-size: contain;
+	display: grid;
+	grid-template-columns: 50% 50%;
 }
 #parteinferior {
 	display: grid;

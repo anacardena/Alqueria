@@ -3,7 +3,7 @@
 	background-size: cover;
 	padding: 6%;
 }
-#login {
+#acceso {
 	background-color: white;
 	display: grid;
 	grid-template-rows: auto auto auto;
@@ -22,7 +22,7 @@ display:grid;
 	grid-template-columns: 1fr 1fr;
 
 }
-#login button {
+#acceso button {
    background-color: #3BC37B;
    color: white;
    border-radius: 10%;

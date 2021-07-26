@@ -7,24 +7,32 @@ import fondo from "../utils/images/fondo.jpg"
 import '../utils/css/auth.css'
 
 export default (props) => {
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
 
-	return (
+  const firebase = useFirebaseApp();
+
+  const login = async () => {
+    await firebase.auth().signInWithEmailAndPassword(email,password)
+    }
+  	return (
          <div id="padre_Auth" style={{backgroundImage:`url(${manchas})`}} >
                  <div id="contenedor" >
                        <div id="Bienvenido" style={{backgroundImage:`url(${fondo})`}}>
                             <h1> Bienvenido a Alquería </h1>
                             <p>Inicia sesión para continuar el acceso</p>
                        </div>
-                       <div id="login">
+                       <div id="acceso">
                          <h2>Acceso	</h2>
                         <label htmlFor="email">Correo electrónico</label>
-                        <input type="email"  id="email"/>
+                        <input type="email"  id="email" onChange={ (ev) => setEmail(ev.target.value)  } />
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" id="password" />
-                        <Link to="/Inicio">
-                        <button>	Iniciar sesión </button> </Link>
+                        <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } />
+                        
+                       <Link  to="/Inicio"> <button onClick={login}>  Iniciar sesión </button> </Link>  
                        </div>  
                 </div>
         </div>
 		   )
+ 
 }

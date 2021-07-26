@@ -1,4 +1,30 @@
+#contenedor_recoleccion {
+padding: 5%;
+}
 .granjas {
 	background-size: contain;
 	background-color: #F8C346;
+}
+/*#buscar {
+	background-color:red;
+	border-radius: 10%;
+	background-size: contain;
+}*/
+#search {
+	border-radius: 50%;
+	border-color: red;
+	 border-bottom-width: thick;
+}
+.información {
+	display: grid;
+	grid-template-columns: 10% 35% 35% 20%;
+}
+.superior {
+	display: grid;
+	grid-template-columns:  30% 70%;}
+.superior input {
+	background-color: #E1DCDC;
+	background-size: contain;
+	color:black;
+	font-size: 13px;
 }
