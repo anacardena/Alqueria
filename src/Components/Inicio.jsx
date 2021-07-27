@@ -15,14 +15,18 @@ function Inicio() {
       
    
       <div id="botones">
+              <div className="imagenes">
               <div style={{backgroundImage:`url(${leche})`}} id="leche" >
              <Link to="/Recoleccion" class="btn">
-             <span>Recoleccion</span>
+             <button>Recoleccion</button>
              </Link>
              </div>
+             </div>
+             <div className="imagenes">
              <div style={{backgroundImage:`url(${ternero})`}} id="ternero">
               <Link to="/Registragranja" class="btn">
-             <span>registro</span> </Link>
+             <button>registro</button></Link>
+             </div>
              </div>
          </div>
 	    </div>

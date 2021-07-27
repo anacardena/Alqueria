@@ -30,9 +30,10 @@ display:grid;
 
 }
 input {
-	  border-radius: 3%;
-	  background-color: red;
-	  opacity: 0.4;
-      border:none;
+	  border: 0;
+	  border-bottom: 2px red solid ;
+	 /* background-color: red;
+	  opacity: 0.4;*/
+    
       margin: 4%;
 }
