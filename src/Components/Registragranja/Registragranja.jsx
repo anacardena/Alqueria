@@ -1,7 +1,6 @@
 import React from 'react'
-import '../utils/css/registrogranja.css'
-import '../utils/css/recoleccion.css'
-import atras from "../utils/images/icons8-volver-50.png"
+import './registrogranja.css'
+import atras from "../../utils/images/icons8-volver-50.png"
 import {Link} from "react-router-dom"
 
 function Registragranja () {
@@ -13,6 +12,7 @@ function Registragranja () {
 
              </Link>
               <h1> aquí debes hacer el registro de las granjas donde el administrador hace cambios </h1>
+
          </div>
     )
 

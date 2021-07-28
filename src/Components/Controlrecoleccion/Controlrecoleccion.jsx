@@ -1,10 +1,9 @@
 import React from 'react'
-import '../utils/css/controlrecoleccion.css'
-import '../utils/css/estilosglobales.css'
-import {Link} from "react-router-dom"
+import './controlrecoleccion.css'
 
-import atras from "../utils/images/icons8-volver-50.png"
-import inicio from "../utils/images/icons8-casa-24.png"
+import {Link} from "react-router-dom"
+import atras from "../../utils/images/icons8-volver-50.png"
+import inicio from "../../utils/images/icons8-casa-24.png"
 
 function Controlrecoleccion() {
 	return (

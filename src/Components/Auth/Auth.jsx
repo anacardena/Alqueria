@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp } from 'reactfire';
 import {Link} from "react-router-dom"
-import manchas from "../utils/images/manchas.jpg"
-import fondo from "../utils/images/fondo.jpg"
-import '../utils/css/auth.css'
+import manchas from "../../utils/images/manchas.jpg"
+import fondo from "../../utils/images/fondo.jpg"
+import './auth.css'
 
 export default (props) => {
   const [ email, setEmail ] = useState('');

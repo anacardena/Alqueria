@@ -1,11 +1,11 @@
 import logo from './utils/images/logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom' 
-import Recoleccion from "./Components/Recoleccion.jsx"
-import Inicio from "./Components/Inicio.jsx"
-import Registragranja from "./Components/Registragranja.jsx"
-import Controlrecoleccion from "./Components/Controlrecoleccion.jsx"
-import Auth from "./Components/Auth.jsx"
+import Recoleccion from "./Components/Recoleccion/Recoleccion.jsx"
+import Inicio from "./Components/Inicio/Inicio.jsx"
+import Registragranja from "./Components/Registragranja/Registragranja.jsx"
+import Controlrecoleccion from "./Components/Controlrecoleccion/Controlrecoleccion.jsx"
+import Auth from "./Components/Auth/Auth.jsx"
 import Header from "./Components/Header.jsx"
 import {useFirebaseApp} from 'reactfire';
 
