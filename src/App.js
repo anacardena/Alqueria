@@ -10,6 +10,7 @@ import Header from "./Components/Header.jsx"
 import Modalregistro from "./Components/Modalregistro/Modalregistro.jsx"
 import Modaleditar from "./Components/Modaleditar/Modaleditar.jsx"
 
+
 import {useFirebaseApp} from 'reactfire'
 
 function App() {

@@ -1,0 +1,65 @@
+.contenedor{
+    height: auto;
+    width: 60%;
+    background-color: rgb(247, 242, 240);
+    
+}
+#header{
+    background-color: red;
+    
+}
+#header h5{
+text-align: center;
+font-size: medium;
+font-family: "Poppins-Regular.ttf" ;
+color: rgb(227, 228, 230);
+padding-top: 50px;
+font-size: 25px;
+}
+.columna{
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+      
+    
+}
+
+.columna label,input{
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+   
+    
+}
+.footer{
+   padding-left:  30%;
+
+}
+.Button{
+    font-size: 60px;
+}
+ #btn1{
+    background-color: seagreen;
+    font-family:"Poppins-Regular.ttf";
+    width: auto;
+    height: 60px;
+    font-size: 25px;
+    color: rgb(227, 228, 230);
+    padding: 15px 10px 15px;
+    border-radius: 30%;
+    border-color: white;
+
+}
+#btn2{
+    background-color: red;
+    font-family: "Poppins-Regular.ttf" ;
+    padding: 15px 10px 15px;
+    height: 60px;
+    font-size:24px ;
+    color: rgb(227, 228, 230);
+    border-radius: 30%;
+    border-color: white;
+}
+
