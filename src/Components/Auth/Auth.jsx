@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
-import { useFirebaseApp } from 'reactfire';
+import { useFirebaseApp, useUser } from 'reactfire';
 import {Link} from "react-router-dom"
 import manchas from "../../utils/images/manchas.jpg"
 import fondo from "../../utils/images/fondo.jpg"
@@ -11,9 +11,9 @@ export default (props) => {
   const [ password, setPassword ] = useState('');
 
   const firebase = useFirebaseApp();
-
+  const user = useUser();
   const login = async () => {
-    await firebase.auth().signInWithEmailAndPassword(email,password)
+    await firebase.auth().signInWithEmailAndPassword(email,password);
     }
   	return (
          <div id="padre_Auth" style={{backgroundImage:`url(${manchas})`}} >
@@ -29,7 +29,7 @@ export default (props) => {
                         <label htmlFor="password">Contraseña</label>
                         <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } />
                         
-                       <Link  to="/Inicio"> <button onClick={login}>  Iniciar sesión </button> </Link>  
+                     <button onClick={login}>  Iniciar sesión </button> 
                        </div>  
                 </div>
         </div>
