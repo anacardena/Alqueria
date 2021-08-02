@@ -13,7 +13,9 @@ export default (props) => {
   const firebase = useFirebaseApp();
   const user = useUser();
   const login = async () => {
-    await firebase.auth().signInWithEmailAndPassword(email,password);
+    await firebase.auth().signInWithEmailAndPassword(email,password)
+    .then(rest=>{window.location.replace('/Inicio')})
+    .catch (err=>{alert('favor verifique su correo o contraseña')})
     }
   	return (
          <div id="padre_Auth" style={{backgroundImage:`url(${manchas})`}} >
@@ -25,9 +27,9 @@ export default (props) => {
                        <div id="acceso">
                          <h2>Acceso	</h2>
                         <label htmlFor="email">Correo electrónico</label>
-                        <input type="email"  id="email" onChange={ (ev) => setEmail(ev.target.value)  } />
+                        <input type="email"  id="email" onChange={ (ev) => setEmail(ev.target.value)  } value={email}/>
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } />
+                        <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } value={password} />
                         
                      <button onClick={login}>  Iniciar sesión </button> 
                        </div>  
