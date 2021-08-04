@@ -79,8 +79,7 @@ function Registragranja (props) {
 
                   <label htmlFor="">Nombre del titular</label>
                   <input type="text" placeholder="Nombretitular" name="Nombre_del_titular" value={values.Nombre_del_titular} onChange={handleChange}/>
-                </div>
-                <div class="columna">
+             
                   <label htmlFor="">Departamento</label>
                   <input type="text" placeholder="Departamento" name="Departamento" value={values.Departamento} onChange={handleChange}/>
 
@@ -93,11 +92,11 @@ function Registragranja (props) {
 
                   <label htmlFor="">Correo electronico</label>
                   <input type="Email" placeholder="correo" name="Correo_electronico" value={values.Correo_electronico} onChange={handleChange}/>
-                </div>
+               
 
                  <label htmlFor="">Ruta de recoleccion</label>
                  <input type="number" placeholder="ruta" name="Ruta_de_recoleccion" value={values.Ruta_de_recoleccion} onChange={handleChange}/>
-
+                   </div>
 
 
 

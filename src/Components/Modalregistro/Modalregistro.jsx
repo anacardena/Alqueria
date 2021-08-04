@@ -26,30 +26,30 @@ const Modalregistro = (props) => {
 
               <form class="body">
                 <div class="columna">
-                  <label htmlFor="">Nombre de la granja</label>
-                  <input type="text" placeholder="Nombregranja"/>
+                        <label htmlFor="">Nombre de la granja</label>
+                        <input type="text" placeholder="Nombregranja"/>
 
-                  <label htmlFor="">Nombre del titular</label>
-                  <input type="text" placeholder="Nombretitular"/>
+                         <label htmlFor="">Nombre del titular</label>
+                         <input type="text" placeholder="Nombretitular"/>
+              
+               
+                          <label htmlFor="">Departamento</label>
+                          <input type="text" placeholder="Departamento"/>
+
+                          <label htmlFor="">Municipio o ciudad</label>
+                          <input type="text" placeholder="Municipio"/>
                 </div>
                 <div class="columna">
-                  <label htmlFor="">Departamento</label>
-                  <input type="text" placeholder="Departamento"/>
+                           <label htmlFor="">Telefono</label>
+                           <input type="number" placeholder="Telefono"/>
 
-                  <label htmlFor="">Municipio o ciudad</label>
-                  <input type="text" placeholder="Municipio"/>
-                </div>
-                <div class="columna">
-                  <label htmlFor="">Telefono</label>
-                  <input type="number" placeholder="Telefono"/>
+                           <label htmlFor="">Correo electronico</label>
+                           <input type="Email" placeholder="correo"/>
+                
 
-                  <label htmlFor="">Correo electronico</label>
-                  <input type="Email" placeholder="correo"/>
-                </div>
-
-                 <label htmlFor="">Ruta de recoleccion</label>
-                 <input type="number" placeholder="ruta"/>
-
+                           <label htmlFor="">Ruta de recoleccion</label>
+                           <input type="number" placeholder="ruta"/>
+                 </div>
 
 
 

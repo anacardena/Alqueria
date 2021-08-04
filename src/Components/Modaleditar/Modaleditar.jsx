@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import './modaleditar.css'
 
-
-
-
 const Modaleditar = (props) => {
     const {
       buttonLabel,
@@ -29,10 +26,10 @@ const Modaleditar = (props) => {
               <form class="body">
                 <div class="columna">
                   <label htmlFor="">Nombre de la granja</label>
-                  <input type="text" placeholder="Nombregranja"/>
+                  <input type="text" placeholder="Nombre granja"/>
 
                   <label htmlFor="">Nombre del titular</label>
-                  <input type="text" placeholder="Nombretitular"/>
+                  <input type="text" placeholder="Nombre titular"/>
                 </div>
                 <div class="columna">
                   <label htmlFor="">Departamento</label>
@@ -50,7 +47,7 @@ const Modaleditar = (props) => {
                 </div>
 
                  <label htmlFor="">Ruta de recoleccion</label>
-                 <input type="number" placeholder="ruta"/>
+                 <input type="selection" placeholder="ruta"/>
 
 
 

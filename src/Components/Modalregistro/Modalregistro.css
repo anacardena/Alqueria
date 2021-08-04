@@ -1,71 +1,69 @@
- 
 
 .contenedor{
     height: auto;
-    width: 60%;
+    width: 40%;
     background-color: rgb(247, 242, 240);
     
 }
 #header{
-    background-color: red;
-    
+    background-color: red; 
 }
 #header h5{
 text-align: center;
 font-size: medium;
-font-family: "Poppins-Regular.ttf" ;
+font-family: "Poppins" ;
 color: rgb(227, 228, 230);
 padding-top: 50px;
-font-size: 25px;
+font-size: 20px;
 }
 .columna{
-    background-color: rgb(227, 228, 230);
+    background-color: rgb(255, 255, 255);
     max-width: 100%;
     text-align: center;
     align-items: center;
-    display: flex;
-      
-    
+    display: grid;
+     grid-template-columns: 1fr 1fr;
 }
 
 .columna label,input{
-    display: block;
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-   
+    
+   margin: 2%;
     
 }
-.footer{
-   padding-left:  30%;
 
+.footer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .Button{
-    font-size: 60px;
+    font-size: auto;
+   
+
 }
  #btn1{
     background-color: seagreen;
-    font-family:"Poppins-Regular.ttf";
-    width: auto;
-    height: 60px;
-    font-size: 25px;
+    font-family:"Poppins";
+    height: 30px;
+    font-size: auto;
     color: rgb(227, 228, 230);
-    padding: 15px 10px 15px;
-    border-radius: 30%;
+    border-radius: 15px 0 15px;
     border-color: white;
-
+    background-size: contain;
+     height: 8vh;
+    width: 10vw;
+    margin: 2%;
 }
 #btn2{
     background-color: red;
-    font-family: "Poppins-Regular.ttf" ;
-    padding: 15px 10px 15px;
-    height: 60px;
-    font-size:24px ;
+    font-family: "Poppins" ;
+    font-size:auto;
     color: rgb(227, 228, 230);
-    border-radius: 30%;
+    border-radius: 15px 0 15px;
     border-color: white;
+    background-size: contain;
+    height: 8vh;
+    width: 10vw;
 }
-
-
-
 
 
