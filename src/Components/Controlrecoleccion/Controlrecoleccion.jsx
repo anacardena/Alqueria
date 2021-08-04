@@ -1,6 +1,6 @@
 import React from 'react'
 import './controlrecoleccion.css'
-import './controlrecoleccion.js'
+//import './controlrecoleccion.js'
 import {Link} from "react-router-dom"
 import atras from "../../utils/images/icons8-volver-50.png"
 import inicio from "../../utils/images/icons8-casa-24.png"
@@ -29,7 +29,7 @@ function Controlrecoleccion() {
                                   
                                  </form>
                                  </div>
-                                 <div > <button id="Guardar" > Guardar </button>  </div>     
+                                 <div > <button id="Guardar" onClick={agregar} > Guardar </button>  </div>     
       
                             </div>
                     </div>
