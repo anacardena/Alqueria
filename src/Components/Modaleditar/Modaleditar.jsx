@@ -13,15 +13,15 @@ const Modaleditar = (props) => {
     } = props;
   
 
-    const [modalEditar, setModalEditar] = useState(false);
+    const [modal, setModalEditar] = useState(false);
 
-    const toggle = () => setModalEditar(!modalEditar);
+    const toggle = () => setModalEditar(!modal);
   
     return (
       <div>
 
         <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
-        <Modal isOpen={Modaleditar} toggle={toggle} className={className} centered={true}>
+        <Modal isOpen={modal} toggle={toggle} className={className} centered={true}>
           <div class="contenedor">
           <ModalHeader id="header" toggle={toggle}>Editar granja</ModalHeader>
             <ModalBody>

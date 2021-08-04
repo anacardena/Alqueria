@@ -11,15 +11,15 @@ const Modalregistro = (props) => {
     } = props;
   
 
-    const [modalRegistro, setModalRegistro] = useState(false);
+    const [modal, setModalRegistro] = useState(false);
 
-    const toggle = () => setModalRegistro(!modalRegistro);
+    const toggle = () => setModalRegistro(!modal);
   
     return (
       <div>
 
         <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
-        <Modal isOpen={modalRegistro} toggle={toggle} className={className} centered={true}>
+        <Modal isOpen={modal} toggle={toggle} className={className} centered={true}>
           <div class="contenedor">
           <ModalHeader id="header" toggle={toggle}>Registrar granja</ModalHeader>
             <ModalBody>
@@ -66,4 +66,3 @@ const Modalregistro = (props) => {
   }
   
   export default Modalregistro;
-
