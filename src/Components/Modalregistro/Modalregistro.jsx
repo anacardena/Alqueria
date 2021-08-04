@@ -48,6 +48,7 @@ const Modalregistro = (props) => {
                 </div>
 
                  <label htmlFor="">Ruta de recoleccion</label>
+                 
                  <input type="number" placeholder="ruta"/>
 
 

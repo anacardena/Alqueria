@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import './registrogranja.css'
 import atras from "../../utils/images/icons8-volver-50.png"
 import Modalregistro from '../Modalregistro/Modalregistro'
@@ -19,6 +20,13 @@ function Registragranja (props) {
     className
   } = props;
 
+  const  getGranjas= ()=>{
+    const granjas = db.collection("granjas").doc().get()
+    console.log(granjas.data) 
+  } 
+  
+  const [granjas,setGranjas] =useState()
+
 
   const [modal, setModalRegistro, setModaleditar] = useState(false);
   
@@ -36,6 +44,12 @@ function Registragranja (props) {
       
     }
   )
+
+  
+  useEffect(() => {
+   getGranjas()
+   console.log(granjas)
+  }, [granjas])
   
   const handleChange = (e) => {
      e.preventDefault()
@@ -44,7 +58,7 @@ function Registragranja (props) {
       [e.target.name]: e.target.value
      })
   }  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault() 
     db.collection("granjas").doc().set(values)
