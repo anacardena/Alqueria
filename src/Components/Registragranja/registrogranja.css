@@ -1,0 +1,54 @@
+.cont-formularios{
+    height: 600px;
+    width:auto;
+    padding:  8% 8%;
+  margin-top: -300px;
+   
+}
+.cont-formularios th{
+    padding: 70px;
+}
+
+.tabla_amarillo{
+    background-color: #F8C346;
+    
+    width: auto;
+    
+
+}
+.tabla_amarillo td{
+    height: 10vh;
+}
+
+#padre_registro span img{
+    margin-top: 8%;
+    margin-right:  80%;
+
+}
+
+.botonregistro{
+    width: 300px;
+    height: 60px;
+    background-color: #3BC37B;
+    font-size:30px;
+    margin-right: 30%;
+    
+    font-family:"Poppins" ;
+    border-radius: 20px 20px 20px;
+    border-color:#3BC37B; ;
+    
+
+
+}
+
+.buscador{
+    width: 300px;
+    height:200px;
+    margin-top: -40px;
+    padding-left: 70%;
+    
+} 
+.buscador input{
+    background-color: rgb(190, 190, 190);
+    width: 200px
+}   

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
-import { useFirebaseApp } from 'reactfire';
+import { useFirebaseApp, useUser } from 'reactfire';
 import {Link} from "react-router-dom"
 import manchas from "../../utils/images/manchas.jpg"
 import fondo from "../../utils/images/fondo.jpg"
@@ -11,9 +11,11 @@ export default (props) => {
   const [ password, setPassword ] = useState('');
 
   const firebase = useFirebaseApp();
-
+  const user = useUser();
   const login = async () => {
     await firebase.auth().signInWithEmailAndPassword(email,password)
+    .then(rest=>{window.location.replace('/Inicio')})
+    .catch (err=>{alert('favor verifique su correo o contraseña')})
     }
   	return (
          <div id="padre_Auth" style={{backgroundImage:`url(${manchas})`}} >
@@ -22,14 +24,15 @@ export default (props) => {
                             <h1> Bienvenido a Alquería </h1>
                             <p>Inicia sesión para continuar el acceso</p>
                        </div>
+
                        <div id="acceso">
                          <h2>Acceso	</h2>
                         <label htmlFor="email">Correo electrónico</label>
-                        <input type="email"  id="email" onChange={ (ev) => setEmail(ev.target.value)  } />
+                        <input type="email"  id="email" onChange={ (ev) => setEmail(ev.target.value)  } value={email}/>
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } />
+                        <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } value={password} />
                         
-                       <Link  to="/Inicio"> <button onClick={login}>  Iniciar sesión </button> </Link>  
+                        <button className="btnlogin" onClick={login}>Iniciar sesión</button> 
                        </div>  
                 </div>
         </div>

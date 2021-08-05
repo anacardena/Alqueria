@@ -1,6 +1,5 @@
 import React from 'react'
 import './controlrecoleccion.css'
-
 import {Link} from "react-router-dom"
 import atras from "../../utils/images/icons8-volver-50.png"
 import inicio from "../../utils/images/icons8-casa-24.png"
@@ -16,12 +15,20 @@ function Controlrecoleccion() {
                     <div id ="parteinferior">
                              <div className="datos">
                                  <div id="fecha">fecha</div>
-                                 <div id="cantidad">Cantidad</div>
+                                 <div id="cantidad"></div>
                               </div>
                             <div className="litros"> 
-                            <h3>¿cuántos litros se produjeron hoy</h3>
-                                 <div id="leche-cantidad"> Cantidad</div>
-                                 <div id="cerrar"> <button> Guardar </button>  </div>     
+                           
+                                 <div id="leche-cantidad"> 
+                                 <form>
+                                  <h3>Digita la fecha de hoy</h3>
+                                  <input id="f" type="date"/>
+                                   <h3 >¿cuántos litros se produjeron hoy?</h3>
+                                 <input id="numero" type="number"/>
+                                  
+                                 </form>
+                                 </div>
+                                 <div > <button id="Guardar" > Guardar </button>  </div>     
       
                             </div>
                     </div>

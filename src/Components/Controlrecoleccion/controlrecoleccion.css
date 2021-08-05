@@ -1,6 +1,5 @@
-.litros {
-	
-	
+.litros, .datos {	
+margin: 5%;
 }
 #leche-cantidad{
 background-color: red;
@@ -17,4 +16,10 @@ background-size: contain;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-content: center;
+
+}
+#parte_superior img {
+	width: 30px;
+	height: 25px;
+	margin: 2%;
 }
