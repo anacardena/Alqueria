@@ -1,5 +1,5 @@
 .cont-formularios{
-    height: 5%;
+    height: 600px;
     width:auto;
     padding:  8% 8%;
   margin-top: -300px;
@@ -9,24 +9,15 @@
     padding: 70px;
 }
 
-.tabla_amarillo {
+.tabla_amarillo{
     background-color: #F8C346;
-    width: 80vw;
-    margin-left: 14%;
-
     
-
-    
+    width: auto;
     
 
 }
-
-.tabla_amarillo tr{
-    padding: 20%;
-  
-  
-
-    
+.tabla_amarillo td{
+    height: 10vh;
 }
 
 #padre_registro span img{

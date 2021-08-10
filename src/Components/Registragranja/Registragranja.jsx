@@ -9,7 +9,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import '../Modalregistro/Modalregistro.css'
 import '../Modaleditar/modaleditar.css'
 
-
+import {toast} from 'react-toastify'
 import {Link} from "react-router-dom"
 import { db } from '../firebase';
 
@@ -48,7 +48,15 @@ function Registragranja (props) {
       
     }
   )
- 
+  const onDeleteLink = async (id) => {
+    if (window.confirm("estas seguro de querer eliminar este usuario?")){
+    await db.collection('granjas').doc(id).delete();
+    toast('Usuario eliminado',{ //Para el coso verde al añadir
+    type: "error",
+    autoClose: 2000,
+      });
+    }
+}
 
   const handleChange = (e) => {
      e.preventDefault()
@@ -66,6 +74,24 @@ function Registragranja (props) {
   
   const  toggle = () => setModalRegistro(!modal);
   const  togglEditar = () => setModalEditar(!modaleditar);
+  
+
+   const getLinks = async() =>{
+    db.collection("granjas")
+    .onSnapshot((querySnapshot) => {
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+            docs.push({...doc.data(), id:doc.id});
+            // console.log(docs)
+    });
+    setGranjas(docs);
+   });
+  }
+
+    useEffect( () => {
+    getLinks();
+    }, []);
+
 
 
 
@@ -96,22 +122,35 @@ function Registragranja (props) {
               <th>PRODUCCION TOTAL</th>
               <th>ACCIONES</th>
             </tr>
-            <tr className="tabla_amarillo">
-              <td>X</td>
-              <td>XXXXXXX</td>
-              <td>XXXXXX</td>
-              <td>XXXXX</td>
-              <td><Button className="botoneditar"  onClick={togglEditar}>{buttonLabel} <img src={lapiz}  /> </Button>
-              <Button className="botoneliminar"  >{buttonLabel} <img src={borrar} /> </Button>
-              </td>
-            </tr>
             
+            
+              
             
             
 
           </table>
         
         </div>
+      <div className="tabla_amarillo">
+
+          {granjas &&  granjas.map(docu => (
+                  <tr>
+                      <td>{docu.id}</td>
+                      <td>{docu.Nombre_del_titular}</td>
+                      <td>{docu.nombre_granja}</td>
+                      
+                      <td>
+                          <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
+                          <img src={lapiz} alt="Editar"/>
+                          </button>
+                          <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
+                    </td>
+                  </tr>
+          ))}
+
+       
+
+      </div>
         
 
         
