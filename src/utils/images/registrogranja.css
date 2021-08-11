@@ -1,38 +1,24 @@
-/*cont-formularios{
-    height: 5%;
+.cont-formularios{
+    height: 600px;
     width:auto;
     padding:  8% 8%;
   margin-top: -300px;
    
 }
-.cont-formularios td{
+.cont-formularios th{
     padding: 70px;
 }
 
-.tabla_amarillo {
+.tabla_amarillo{
     background-color: #F8C346;
-    width: 80vw;
-    margin-left: 14%;
-
     
-
+    width: auto;
     
-    
-
-}*/
-
-.tabla_amarillo{    
-width: 100%;
-
 
 }
-.tabla_amarillo table tr{
-    width: 90%;
-    height: 150px;
+.tabla_amarillo td{
+    height: 10vh;
 }
-
-
-
 
 #padre_registro span img{
     margin-top: 8%;

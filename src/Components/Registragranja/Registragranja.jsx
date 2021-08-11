@@ -9,7 +9,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import '../Modalregistro/Modalregistro.css'
 import '../Modaleditar/modaleditar.css'
 
-
+import {toast} from 'react-toastify'
 import {Link} from "react-router-dom"
 import { db } from '../firebase';
 
@@ -48,7 +48,15 @@ function Registragranja (props) {
       
     }
   )
- 
+  const onDeleteLink = async (id) => {
+    if (window.confirm("estas seguro de querer eliminar este usuario?")){
+    await db.collection('granjas').doc(id).delete();
+    toast('Usuario eliminado',{ //Para el coso verde al añadir
+    type: "error",
+    autoClose: 2000,
+      });
+    }
+}
 
   const handleChange = (e) => {
      e.preventDefault()
@@ -66,52 +74,84 @@ function Registragranja (props) {
   
   const  toggle = () => setModalRegistro(!modal);
   const  togglEditar = () => setModalEditar(!modaleditar);
+  
+
+   const getLinks = async() =>{
+    db.collection("granjas")
+    .onSnapshot((querySnapshot) => {
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+            docs.push({...doc.data(), id:doc.id});
+            // console.log(docs)
+    });
+    setGranjas(docs);
+   });
+  }
+
+    useEffect( () => {
+    getLinks();
+    }, []);
+
 
 
 
     return (
 
     	<div id="padre_registro">
-    	  
-    	 <Link to="/Inicio" class="btn">
-        
-        <span><img src={atras} /></span>
 
-        </Link>
-        
-        <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
-        
+    	  <div className="parte_superior">
+          <Link to="/Inicio" class="btn">
+          
+          <span><img src={atras} /></span>
 
-        <div className="buscador">
-         <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
-         <button type="button" id="search"><img src={buscar} /></button>
+          </Link>
+          
+          <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
+          
+
+          <div className="buscador">
+          <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
+          <button type="button" id="search"><img src={buscar} /></button>
+          </div>
+          
         </div>
-
-        <div className="cont-formularios">
-          <table>
-            <tr>
-              <th>ID</th>
-              <th>TITULAR</th>
-              <th>NOMBRE GRANJA</th>
-              <th>PRODUCCION TOTAL</th>
-              <th>ACCIONES</th>
-            </tr>
-            <tr className="tabla_amarillo">
-              <td>X</td>
-              <td>XXXXXXX</td>
-              <td>XXXXXX</td>
-              <td>XXXXX</td>
-              <td><Button className="botoneditar"  onClick={togglEditar}>{buttonLabel} <img src={lapiz}  /> </Button>
-              <Button className="botoneliminar"  >{buttonLabel} <img src={borrar} /> </Button>
-              </td>
-            </tr>
-            
-            
-            
-
-          </table>
         
-        </div>
+       <div className="tabla_amarillo">
+        <table>
+
+          
+            <strong><tr>
+              <td>NOMBRE GRANJA</td>
+              <td>TITULAR</td>
+              <td>PRODUCCION TOTAL</td>
+              <td>ACCIONES</td>
+           </tr></strong>
+         
+          
+
+          
+        
+            {granjas &&  granjas.map(docu => (
+                    <tr>
+                        
+                        <td>{docu.Nombre_del_titular}</td>
+                        <td>{docu.nombre_granja}</td>
+                        <td>{docu.Departamento}</td>
+                        <td>{docu.Ruta_de_recoleccion}</td>
+                        <td>{docu.Telefono}</td>
+                        <td>
+                            <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
+                            <img src={lapiz} alt="Editar"/>
+                            </button>
+                            <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
+                      </td>
+                    </tr>
+            ))}
+          
+        </table>
+       
+
+      </div>
         
 
         
