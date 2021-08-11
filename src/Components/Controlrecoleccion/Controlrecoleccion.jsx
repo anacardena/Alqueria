@@ -31,7 +31,7 @@ function Controlrecoleccion(props) { //props son las propiedades, todos los dato
         db.collection("produccion").onSnapshot((querySnapshot) => { 
           let docs =[]
         querySnapshot.forEach((doc) => {
-        docs.push({...doc.data(), id:doc.id});//cada vez que me traiga todoss los datos
+        docs.push({...doc.data(), id:doc.id});  
    });
       console.log(docs)   //setCantidad(docs);
   });
