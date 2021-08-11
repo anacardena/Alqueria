@@ -98,56 +98,57 @@ function Registragranja (props) {
     return (
 
     	<div id="padre_registro">
-    	  
-    	 <Link to="/Inicio" class="btn">
-        
-        <span><img src={atras} /></span>
 
-        </Link>
-        
-        <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
-        
+    	  <div className="parte_superior">
+          <Link to="/Inicio" class="btn">
+          
+          <span><img src={atras} /></span>
 
-        <div className="buscador">
-         <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
-         <button type="button" id="search"><img src={buscar} /></button>
+          </Link>
+          
+          <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
+          
+
+          <div className="buscador">
+          <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
+          <button type="button" id="search"><img src={buscar} /></button>
+          </div>
+          
         </div>
-
-        <div className="cont-formularios">
-          <table>
-            <tr>
-              <th>ID</th>
-              <th>TITULAR</th>
-              <th>NOMBRE GRANJA</th>
-              <th>PRODUCCION TOTAL</th>
-              <th>ACCIONES</th>
-            </tr>
-            
-            
-              
-            
-            
-
-          </table>
         
-        </div>
-      <div className="tabla_amarillo">
+       <div className="tabla_amarillo">
+        <table>
 
-          {granjas &&  granjas.map(docu => (
-                  <tr>
-                      <td>{docu.id}</td>
-                      <td>{docu.Nombre_del_titular}</td>
-                      <td>{docu.nombre_granja}</td>
-                      
-                      <td>
-                          <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
-                          <img src={lapiz} alt="Editar"/>
-                          </button>
-                          <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
-                    </td>
-                  </tr>
-          ))}
+          
+            <strong><tr>
+              <td>NOMBRE GRANJA</td>
+              <td>TITULAR</td>
+              <td>PRODUCCION TOTAL</td>
+              <td>ACCIONES</td>
+           </tr></strong>
+         
+          
 
+          
+        
+            {granjas &&  granjas.map(docu => (
+                    <tr>
+                        
+                        <td>{docu.Nombre_del_titular}</td>
+                        <td>{docu.nombre_granja}</td>
+                        <td>{docu.Departamento}</td>
+                        <td>{docu.Ruta_de_recoleccion}</td>
+                        <td>{docu.Telefono}</td>
+                        <td>
+                            <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
+                            <img src={lapiz} alt="Editar"/>
+                            </button>
+                            <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
+                      </td>
+                    </tr>
+            ))}
+          
+        </table>
        
 
       </div>

@@ -1,11 +1,11 @@
-.cont-formularios{
+/*cont-formularios{
     height: 5%;
     width:auto;
     padding:  8% 8%;
   margin-top: -300px;
    
 }
-.cont-formularios th{
+.cont-formularios td{
     padding: 70px;
 }
 
@@ -19,15 +19,20 @@
     
     
 
+}*/
+
+.tabla_amarillo{    
+width: 100%;
+
+
+}
+.tabla_amarillo table tr{
+    width: 90%;
+    height: 150px;
 }
 
-.tabla_amarillo tr{
-    padding: 20%;
-  
-  
 
-    
-}
+
 
 #padre_registro span img{
     margin-top: 8%;
