@@ -4,11 +4,9 @@ import borrar from '../../utils/images/eliminar.png'
 import './registrogranja.css'
 import atras from "../../utils/images/icons8-volver-50.png"
 import buscar from "../../utils/images/icons8-búsqueda-24.png"
-
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import '../Modalregistro/Modalregistro.css'
 import '../Modaleditar/modaleditar.css'
-
 import {toast} from 'react-toastify'
 import {Link} from "react-router-dom"
 import { db } from '../firebase';
@@ -16,7 +14,6 @@ import { db } from '../firebase';
 
 
 function Registragranja (props) {
-  
   const {
     buttonLabel,
     className
@@ -24,10 +21,7 @@ function Registragranja (props) {
 
   const  getGranjas= ()=>{
     const granjas = db.collection("granjas").doc().get()
-    console.log(granjas.data) 
-  } 
-  
-  
+    console.log(granjas.data) } 
   const [granjas,setGranjas] =useState()
 
 
@@ -43,9 +37,6 @@ function Registragranja (props) {
       Telefono: "",
       Correo_electronico: "",
       Ruta_de_recoleccion:""
-
-
-      
     }
   )
   const onDeleteLink = async (id) => {
@@ -65,7 +56,6 @@ function Registragranja (props) {
       [e.target.name]: e.target.value
      })
   }  
-
   const handleSubmit = (e) => {
     e.preventDefault() 
     db.collection("granjas").doc().set(values)
@@ -97,69 +87,50 @@ function Registragranja (props) {
 
     return (
 
-    	<div id="padre_registro">
+      <div id="padre_registro">
 
-    	  <div className="parte_superior">
+        <div className="parte_superior">
           <Link to="/Inicio" class="btn">
-          
           <span><img src={atras} /></span>
 
           </Link>
-          
           <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
-          
 
           <div className="buscador">
           <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
-          <button type="button" id="search"><img src={buscar} /></button>
+          <button type="button" id="search"> <img src={buscar} /> </button>
           </div>
-          
         </div>
-        
-       <div className="tabla_amarillo">
-        <table>
-
-          
-            <strong><tr>
-              <td>NOMBRE GRANJA</td>
-              <td>TITULAR</td>
-              <td>PRODUCCION TOTAL</td>
-              <td>ACCIONES</td>
-           </tr></strong>
-         
-          
-
-          
-        
-            {granjas &&  granjas.map(docu => (
+        <div  className="tabla">
+          <table id="customers">
+            <tr>
+           <th>Nombre del titular</th>
+           <th>nombre de la granja</th>
+           <th>Departamento</th>
+           <th>ruta</th>
+           <th>Telefono</th>
+           <th>Aciones</th>
+  </tr>
+  {granjas &&  granjas.map(docu => (
                     <tr>
-                        
+                        {console.log(docu.nombre_granja)}
                         <td>{docu.Nombre_del_titular}</td>
                         <td>{docu.nombre_granja}</td>
                         <td>{docu.Departamento}</td>
                         <td>{docu.Ruta_de_recoleccion}</td>
                         <td>{docu.Telefono}</td>
                         <td>
-                            <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
+                            <button className="botonEditar" onClick={() => togglEditar(togglEditar)}>
                             <img src={lapiz} alt="Editar"/>
                             </button>
                             <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
                       </td>
                     </tr>
             ))}
-          
-        </table>
-       
+</table>
 
-      </div>
-        
+        </div>
 
-        
-        
-
-            
-            
-      
       <Modal isOpen={modal} toggle={toggle} className={className} centered={true}>
           <div class="contenedor">
           <ModalHeader id="header" >Registrar granja</ModalHeader>
@@ -172,7 +143,6 @@ function Registragranja (props) {
 
                   <label htmlFor="">Nombre del titular</label>
                   <input type="text" placeholder="Nombretitular" name="Nombre_del_titular" value={values.Nombre_del_titular} onChange={handleChange}/>
-             
                   <label htmlFor="">Departamento</label>
                   <input type="text" placeholder="Departamento" name="Departamento" value={values.Departamento} onChange={handleChange}/>
 
@@ -185,7 +155,6 @@ function Registragranja (props) {
 
                   <label htmlFor="">Correo electronico</label>
                   <input type="Email" placeholder="correo" name="Correo_electronico" value={values.Correo_electronico} onChange={handleChange}/>
-               
 
                  <label htmlFor="">Ruta de recoleccion</label>
                  <input type="number" placeholder="ruta" name="Ruta_de_recoleccion" value={values.Ruta_de_recoleccion} onChange={handleChange}/>
@@ -200,7 +169,7 @@ function Registragranja (props) {
             <Button id="btn2"  onClick={toggle}>Cancelar</Button>
           </ModalFooter>
           </div>
-        </Modal> 
+        </Modal>
 
         {/*modal editar */}
         <Modal isOpen={modaleditar} toggle={togglEditar} className={className} centered={true}>
@@ -245,17 +214,9 @@ function Registragranja (props) {
           </ModalFooter>
           </div>
         </Modal>
-      </div>  
-      
-      
-         
-             
-              
-        
-         
+      </div> 
     )
 
 }
 
 export default Registragranja
-

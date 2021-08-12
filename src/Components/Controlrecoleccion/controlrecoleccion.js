@@ -38,7 +38,7 @@ const cantidad = () => {
 
 
 
-  function addOrEdit={addOrEdit}
+  //function addOrEdit={addOrEdit}
 };
 
 export default cantidad;
