@@ -1,11 +1,14 @@
 .litros, .datos {	
 margin: 5%;
+
 }
 #leche-cantidad{
 background-color: red;
 background-size: contain;
 color: white;
-
+justify-content: center;
+align-items: center;
+display: flex;
 }
 .datos {
 	background-color: #F8C346;
@@ -39,7 +42,7 @@ color: white;
 
 }
 .columna {
-	background-color: blue;
+	background-color: #dbd3c1;
 	display:grid;
 	grid-template-columns:  1fr;
     background-size: contain;

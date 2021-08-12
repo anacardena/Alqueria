@@ -19,7 +19,7 @@ function Registragranja (props) {
     className
   } = props;
 
-  const  getGranjas= ()=>{
+  const  getGranjas= () =>{
     const granjas = db.collection("granjas").doc().get()
     console.log(granjas.data) } 
   const [granjas,setGranjas] =useState()

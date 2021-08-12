@@ -70,7 +70,24 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
                             <h1> la vaca lola </h1>
                    </div>
                     <div id ="parteinferior">
-                                <div className="columna">
+                            <div  className="tabla">
+                               <table id="customers">
+                                   <tr>
+                                      <th>fecha</th>
+                                      <th>Cantidad</th>
+                                      <th>acciones</th>
+                                   </tr>
+                                    {cantidad && cantidad.map(cant =>(
+                                   <tr>
+                                      <td>{cant.fecha}</td>
+                                     <td>{cant.numero}</td>
+                                      <td> <button className="botoneliminar" onClick={() =>onDelete(cant.id)}> <img src={borrar}/> </button></td>
+                                  </tr>
+                                   ))}
+                               </table>
+
+                            </div>
+                               {/*<div className="columna">
                           
                                    <div className="datos">
                                  {cantidad && cantidad.map(cant =>(
@@ -84,12 +101,13 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
                                   ))
                                 }
                              </div>
-                           </div>
+                           </div>*/}
                             
                             <div className="litros"> 
-                                  
+                                 
                                  <div id="leche-cantidad"> 
-                                 <form onSubmit={handleSubmit}> //cada vez que usen el formulario quiero que utilicen la función handleSubmit
+
+                                 <form onSubmit={handleSubmit}>
                                       <h3>Digita la fecha de hoy</h3>
                                       <input id="f" name="fecha" type="date" onChange={handleInputChange}  value={values.fecha}/>
                                        <h3 >¿cuántos litros se produjeron hoy?</h3>
@@ -105,3 +123,4 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
 		)	
 };
 export default Controlrecoleccion
+  

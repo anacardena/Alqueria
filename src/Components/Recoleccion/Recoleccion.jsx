@@ -7,7 +7,31 @@ import { db } from '../firebase';
 import borrar from '../../utils/images/eliminar.png'
 import control from '../../utils/images/icons8-panel-de-control-50.png'
 function Recoleccion  (props) {
-      const  getGranjas= ()=>{
+
+      /*state={
+        busqueda: '',
+        nombres: []
+      }
+
+      onChange=async e =>{
+        e.persist();
+        await this.setState({busqueda: e.target.value});
+        this.filtrarElementos();
+      }
+      componentDidMount(){
+        this.setState({nombres: granjas});
+      }
+      filtrarElementos=() => {
+        var search=granjas.filter(item=>{
+          if(item.nombre_granja.icludes(this.state.busqueda)){
+            return item;
+          }
+        });
+        this.setState({nombre: search});
+      }*/
+
+
+      const  getGranjas= () =>{
         const granjas = db.collection("granjas").doc().get()
         console.log(granjas.data) } 
       const [granjas,setGranjas] =useState()
@@ -36,7 +60,7 @@ function Recoleccion  (props) {
                                  </Link>
                          </div>
                          <form>
-                         <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
+                         <input type="text" name="busqueda" placeholder="digite el nombre de la granja" />
                          <button type="button" id="search"><img src={buscar} /></button>
                          </form>
                 </div>
