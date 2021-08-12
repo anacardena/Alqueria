@@ -21,8 +21,10 @@ export default (props) => {
          <div id="padre_Auth" style={{backgroundImage:`url(${manchas})`}} >
                  <div id="contenedor" >
                        <div id="Bienvenido" style={{backgroundImage:`url(${fondo})`}}>
+                           
                             <h1> Bienvenido a Alquería </h1>
-                            <p>Inicia sesión para continuar el acceso</p>
+                            <p> Inicia sesión para continuar el acceso </p>
+                            
                        </div>
 
                        <div id="acceso">
@@ -32,7 +34,7 @@ export default (props) => {
                         <label htmlFor="password">Contraseña</label>
                         <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } value={password} />
                         
-                        <button className="btnlogin" onClick={login}>Iniciar sesión</button> 
+                        <button className="btnlogin" onClick={login}>Iniciar Sesión</button> 
                        </div>  
                 </div>
         </div>

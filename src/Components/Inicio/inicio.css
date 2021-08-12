@@ -5,7 +5,7 @@
 #leche, #ternero{
     width: 60vh;
 	height: 20vw;
-	display: flex;
+	display: flex; 
     background-repeat: no-repeat;
 	background-size: cover;
 	justify-content: center;
@@ -23,9 +23,12 @@
 #cerrar button {
    background-color: #3BC37B;
    color: white;
-   border-radius: 10%;
+     border-radius: 10%;
    border: none;
- 
+   width: 10vw;
+   height: 7vh;
+   border: none;
+   margin: 1%;
 
 }	
 .imagenes {
@@ -39,5 +42,8 @@
 	border: 0;
 	color: white;
 	background-color: red;
-	border-radius: 20%;
+	  border-radius: 10%;
+   border: none;
+   width: 10vw;
+   height: 7vh;
 	}

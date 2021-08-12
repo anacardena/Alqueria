@@ -7,15 +7,18 @@
 	background-color: white;
 	display: grid;
 	grid-template-rows: auto auto auto;
-	width: ;
+    justify-content: center;
+	align-items: center;
+    text-align: center;
 }
 #Bienvenido {
 	color: white;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	padding: 10%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	justify-content: center;
-	align-items: center;
-    text-align: center;
+
 }
 #contenedor {
 	
@@ -28,16 +31,9 @@ display:grid;
    color: white;
    border-radius: 10%;
    border: none;
-   margin-left: 40%;
-   
-
-
-}
-.btnlogin{
-	width: 120px;
-	height: 60px;
-	font-size: medium;
-	
+   width: 10vw;
+   height: 7vh;
+   margin-left: 20%;
 }
 input {
 	  border: 0;
@@ -45,5 +41,23 @@ input {
 	 /* background-color: red;
 	  opacity: 0.4;*/
     
-      margin: %;
+      margin: 4%;
+}
+
+
+@media screen and (min-width:801px) and (max-width:1025px) {
+	
+
+}
+
+
+@media screen and (min-width:421px) and (max-width:800px) {
+ 
+}
+@media screen and (min-width:375px) and (max-width:420px){
+	
+
+}
+@media screen and (min-width:200px) and (max-width:374px){
+	
 }
