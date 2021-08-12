@@ -20,6 +20,13 @@
     
 
 }*/
+#tabla td {
+padding-left: 40%;
+
+}
+#tabla tr{
+    width: 150px;
+}
 
 .tabla_amarillo{    
 width: 100%;

@@ -71,7 +71,22 @@ function Registragranja (props) {
     db.collection("granjas").doc().set(values)
     setValues({...useState})
   }
-  
+  const[currentId, setCurrentId] = useState("");
+  const addOrEditLink = async (LinkObjets) => {
+      if (currentId === ""){
+          await db.collection("granjas").doc().set(LinkObjets)
+          toast('Nueva entrada',{ //Para el coso verde al añadir
+          type: 'success'
+      });
+      }
+      else {
+          await db.collection('links').doc(currentId).update(LinkObjets)
+          toast('Actualizado',{ //Para el coso verde al añadir
+              type: 'info'
+          });
+          setCurrentId('')
+      }
+  };
   const  toggle = () => setModalRegistro(!modal);
   const  togglEditar = () => setModalEditar(!modaleditar);
   
@@ -120,19 +135,19 @@ function Registragranja (props) {
         <table>
 
           
-            <strong><tr>
-              <td>NOMBRE GRANJA</td>
+            <tr id="tabla">
+              <td>NOMBRE DE LA GRANJA</td>
               <td>TITULAR</td>
               <td>PRODUCCION TOTAL</td>
               <td>ACCIONES</td>
-           </tr></strong>
+           </tr>
          
           
 
           
         
             {granjas &&  granjas.map(docu => (
-                    <tr>
+                    <tr id="mapa">
                         
                         <td>{docu.Nombre_del_titular}</td>
                         <td>{docu.nombre_granja}</td>
@@ -140,7 +155,7 @@ function Registragranja (props) {
                         <td>{docu.Ruta_de_recoleccion}</td>
                         <td>{docu.Telefono}</td>
                         <td>
-                            <button className="botonEditar" onClick={() => togglEditar (togglEditar)}>
+                            <button className="botonEditar" onClick={() => setCurrentId(docu.id)}>
                             <img src={lapiz} alt="Editar"/>
                             </button>
                             <button className="botonEliminar"onClick={() => onDeleteLink(docu.id)}><img src={borrar} /></button>
@@ -158,7 +173,7 @@ function Registragranja (props) {
         
 
             
-            
+      { /*MODAL REGISTRO*/ }    
       
       <Modal isOpen={modal} toggle={toggle} className={className} centered={true}>
           <div class="contenedor">
