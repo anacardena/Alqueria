@@ -9,8 +9,12 @@ import {db}  from '../firebase'; //conecta con firebase
 
 function Controlrecoleccion(props) { //props son las propiedades, todos los datos que le están pasando
 
- const [cantidad, setCantidad] = useState([]);
 
+
+const  getCantidad= () =>{
+    const produccion = db.collection("produccion").doc().get()
+    console.log(produccion.data) } 
+  const [produccion,setCantidad] =useState()
 
               //una función para agregar o editar información
   const addOrEditCant = async (CantObject) => {
@@ -28,16 +32,17 @@ function Controlrecoleccion(props) { //props son las propiedades, todos los dato
   };
 
   const getCant = async () => { //le hace una petición a firebase
-        db.collection("produccion").onSnapshot((querySnapshot) => { 
+        db.collection("produccion")
+        .onSnapshot((querySnapshot) => { 
           let docs =[]
         querySnapshot.forEach((doc) => {
         docs.push({...doc.data(), id:doc.id});  
-   });
-     console.log(docs)   
-      //setCantidad(docs);
+        // console.log(docs)   
+   }); 
+       setCantidad(docs);
   });
-};
- useEffect (() => {
+}
+ useEffect ( () => {
       getCant();
  }, []);
 
@@ -53,13 +58,14 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
  
   const handleInputChange = (e) => {
    const { name, value } = e.target;  //reconoce el imput que tipea y el valor que se le da
-   setValues({...values, [name]: value}) //para que copee los valores actuales y luego el imput que esten actualizando coloque el valor actual que esté tipeando
+   setValues({...values, [name]: value}) 
  
   }
  
     //el handleSubmit recibe la información del evento
     const handleSubmit = (e) => {
       e.preventDefault();
+      db.collection("produccion").doc().set(values)
       addOrEditCant(values); 
        setValues({...initialStateValues})//una vez guarde los datos se limpie el formulario
     };
@@ -78,7 +84,7 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
                                       <th>Cantidad</th>
                                       <th>acciones</th>
                                    </tr>
-                                    {cantidad && cantidad.map(cant =>(
+                                    {produccion && produccion.map(cant =>(
                                    <tr>
                                       <td>{cant.fecha}</td>
                                      <td>{cant.numero}</td>
