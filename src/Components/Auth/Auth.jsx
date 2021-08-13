@@ -34,7 +34,7 @@ export default (props) => {
                         <label htmlFor="password">Contraseña</label>
                         <input type="password" id="password" onChange={ (ev) => setPassword(ev.target.value)  } value={password} />
                         
-                        <button className="btnlogin" onClick={login}>Iniciar Sesión</button> 
+                        <button className="btnlogin" onClick={login}><strong>Iniciar Sesión </strong></button> 
                        </div>  
                 </div>
         </div>

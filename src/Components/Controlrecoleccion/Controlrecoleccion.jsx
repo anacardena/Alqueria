@@ -33,7 +33,8 @@ function Controlrecoleccion(props) { //props son las propiedades, todos los dato
         querySnapshot.forEach((doc) => {
         docs.push({...doc.data(), id:doc.id});  
    });
-      console.log(docs)   //setCantidad(docs);
+     console.log(docs)   
+      //setCantidad(docs);
   });
 };
  useEffect (() => {
@@ -65,9 +66,9 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
 	return (
 		<div id="padre_control"> 
                    <div id="parte_superior">
-                            <Link to="/Recoleccion" class="btn"><span><img src={atras} /></span></Link>
-                            <Link to="/Inicio" class="btn"><span><img src={inicio} /></span></Link>
-                            <h1> la vaca lola </h1>
+                           <div> <Link to="/Recoleccion" class="btn"><span><img src={atras} /></span></Link></div>
+                            <div><Link to="/Inicio" class="btn"><span><img src={inicio} /></span></Link></div>
+                            <div><h1> la vaca lola </h1> </div>
                    </div>
                     <div id ="parteinferior">
                             <div  className="tabla">
@@ -87,36 +88,22 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
                                </table>
 
                             </div>
-                               {/*<div className="columna">
-                          
-                                   <div className="datos">
-                                 {cantidad && cantidad.map(cant =>(
-                                  
-                                   <> <div id="fecha"><p>{cant.fecha}</p></div>
-                                
-                                 <div id="cantidad"><p>{cant.numero}</p></div>
-                               <button className="botoneditar"  ><img src={lapiz}/> </button>
-                               <button className="botoneliminar" onClick={() =>onDelete(cant.id)}> <img src={borrar}/> </button>
-                                  </>
-                                  ))
-                                }
-                             </div>
-                           </div>*/}
+                              
                             
                             <div className="litros"> 
                                  
-                                 <div id="leche-cantidad"> 
-
+                                
                                  <form onSubmit={handleSubmit}>
-                                      <h3>Digita la fecha de hoy</h3>
+                                     <h3>Digita la fecha de hoy</h3>
                                       <input id="f" name="fecha" type="date" onChange={handleInputChange}  value={values.fecha}/>
+                                       
+                                   
                                        <h3 >¿cuántos litros se produjeron hoy?</h3>
                                        <input id="numero" name="numero" type="number" onChange={handleInputChange} value={values.numero}/>
-                                  
-                                 
-                                 <div > <button id="Guardar" type="submit"> Guardar </button>  </div>     
-                                </form>
-                                </div>
+                                       
+                                        <div><button id="Guardar" type="submit"><strong>Guardar  </strong> </button> </div>
+                                </form>        
+                               
                             </div>
                   </div>
       </div>

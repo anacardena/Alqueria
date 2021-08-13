@@ -1,32 +1,29 @@
-.litros, .datos {	
+.litros {	
 margin: 5%;
 
 }
-#leche-cantidad{
+.litros {
 background-color: red;
 background-size: contain;
 color: white;
 justify-content: center;
 align-items: center;
+text-align: center;
 display: flex;
+padding: 1%;
 }
-.datos {
-	background-color: #F8C346;
-	background-size: contain;
-	display: grid;
-	grid-template-columns: 50% 50%;
 
-}
+
 #parteinferior {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	
      justify-content: center;
      align-items: center;
 }
 #parte_superior img {
 	width: 5vw;
 	height: 10vh;
+	margin: 5%;
 }
 .litros button {
 	 background-color: #3BC37B;
@@ -37,13 +34,9 @@ display: flex;
    height: 7vh;
 }
 #parte_superior {
-	display: flex;
+	display: grid;
+	grid-template-columns: 6% 6% 80%;
 	text-align: center;
+	margin: 2%;
 
-}
-.columna {
-	background-color: #dbd3c1;
-	display:grid;
-	grid-template-columns:  1fr;
-    background-size: contain;
 }

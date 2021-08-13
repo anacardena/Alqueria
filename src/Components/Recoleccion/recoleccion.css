@@ -21,12 +21,15 @@ padding: 5%;
 }
 .superior {
 	display: grid;
-	grid-template-columns:  30% 70%;}
+	grid-template-columns:  10% 90%;
+	text-align: right;
+}
 .superior input {
 	background-color: #E1DCDC;
 	background-size: contain;
 	color:black;
 	font-size: 13px;
+
 }
 .tabla  {
 	margin-top: 5%;

@@ -7,7 +7,7 @@ import { db } from '../firebase';
 import borrar from '../../utils/images/eliminar.png'
 import control from '../../utils/images/icons8-panel-de-control-50.png'
 function Recoleccion  (props) {
-
+      {/*value={this.state.busqueda} onChange={this.onChange} esto va dentro del imput*/}
       /*state={
         busqueda: '',
         nombres: []
@@ -59,10 +59,12 @@ function Recoleccion  (props) {
                                  <span><img src={atras} /></span>
                                  </Link>
                          </div>
+                         <div>
                          <form>
                          <input type="text" name="busqueda" placeholder="digite el nombre de la granja" />
                          <button type="button" id="search"><img src={buscar} /></button>
                          </form>
+                         </div>
                 </div>
             <div  className="tabla">
           <table id="customers">
