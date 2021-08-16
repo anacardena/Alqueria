@@ -1,0 +1,18 @@
+
+/*estilos banner superior*/
+#banner {
+	width: 100vw;
+	height: 25vh;
+	background-color: #CB262A;
+	background-size: contain;
+   background-repeat: no-repeat;
+}
+/*#banner #logo {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}*/
+@font-face { /* carpeta de fuentes para el tipo de letra*/
+    font-family: "Poppins-Regular.ttf";
+    /*src: url(../css/Poppins-Regular);*/
+}

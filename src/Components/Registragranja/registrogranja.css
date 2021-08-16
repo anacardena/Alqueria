@@ -1,0 +1,66 @@
+#padre_registro span img{
+    margin-top: 8%;
+    margin-right:  80%;
+
+}
+.parte_superior{
+    width: auto;
+    height: 180px;
+}
+#btn{
+    margin-left: 70px;
+
+}
+.buscador {
+size: 200px;
+}
+#botonregistro{
+    width: 300px;
+    height: 60px;
+    background-color: #3BC37B;
+    font-size:30px;
+    margin-right: 30%;
+     color: #ddd;
+    font-family:"Poppins" ;
+    border-radius: 20px 20px 20px;
+    border-color:#3BC37B; 
+    margin-left: 150px;
+    
+
+}
+
+
+.buscador{
+    width: 300px;
+    height:200px;
+    margin-top: -40px;
+    padding-left: 70%;
+}
+.buscador input{
+    background-color: rgb(190, 190, 190);
+    width: 200px
+}
+.tabla  {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   margin-bottom: 5%;
+  }
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #customers tr:hover {background-color: #ddd;}
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#F8C346;
+    color: white;
+  }
