@@ -97,7 +97,7 @@ function Registragranja (props) {
           <Button id="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
 
           <div className="buscador">
-          <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
+          
           <button type="button" id="search"> <img src={buscar} /> </button>
           </div>
         </div>
