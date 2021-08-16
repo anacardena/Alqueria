@@ -1,56 +1,66 @@
 #contenedor_recoleccion {
-padding: 5%;
-}
-.granjas {
-	background-size: contain;
-	background-color: #F8C346;
-}
-/*#buscar {
-	background-color:red;
-	border-radius: 10%;
-	background-size: contain;
-}*/
-#search {
-	border-radius: 50%;
-	border-color: red;
-	 border-bottom-width: thick;
-}
-.información {
-	display: grid;
-	grid-template-columns: 10% 35% 35% 20%;
-}
-.superior {
-	display: grid;
-	grid-template-columns:  30% 70%;}
-.superior input {
-	background-color: #E1DCDC;
-	background-size: contain;
-	color:black;
-	font-size: 13px;
-}
-.tabla  {
-	margin-top: 5%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	margin-bottom: 5%;
-   }
- #customers {
-	 font-family: Arial, Helvetica, sans-serif;
-	 border-collapse: collapse;
-	 width: 80%;
-   }
-   #customers td, #customers th {
-	 border: 1px solid #ddd;
-	 padding: 8px;
-   }
-   #customers tr:nth-child(even){background-color: #f2f2f2;}
-   #customers tr:hover {background-color: #ddd;}
-   #customers th {
-	 padding-top: 12px;
-	 padding-bottom: 12px;
-	 text-align: left;
-	 background-color: red;
-	 color: white;
-   }  
- 
+	padding: 5%;
+	}
+	.granjas {
+		background-size: contain;
+		background-color: #F8C346;
+	}
+	/*#buscar {
+		background-color:red;
+		border-radius: 10%;
+		background-size: contain;
+	}*/
+	#search {
+		border-radius: 50%;
+		border-color: red;
+		 border-bottom-width: thick;
+	}
+	#busca{
+		margin-right: 100px;
+	}
+		
+	.información {
+		display: grid;
+		grid-template-columns: 10% 35% 35% 20%;
+	}
+	.superior {
+		display: grid;
+		grid-template-columns:  10% 90%;
+		text-align: right;
+	}
+	.superior input {
+		background-color: #E1DCDC;
+		background-size: contain;
+		color:black;
+		font-size: 13px;
+	
+	}
+	.tabla  {
+		margin-top: 5%;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		margin-bottom: 5%;
+	   }
+	 #customers {
+		 font-family: Arial, Helvetica, sans-serif;
+		 border-collapse: collapse;
+		 width: 80%;
+	   }
+	   #customers td, #customers th {
+		 border: 1px solid #ddd;
+		 padding: 8px;
+	   }
+	   #customers tr:nth-child(even){background-color: #f2f2f2;}
+	   #customers tr:hover {background-color: #ddd;}
+	   #customers th {
+		 padding-top: 12px;
+		 padding-bottom: 12px;
+		 text-align: left;
+		 background-color: red;
+		 color: white;
+	   }  
+	  #customers img {
+			 border:0;
+	
+	   }

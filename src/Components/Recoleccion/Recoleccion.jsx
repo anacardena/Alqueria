@@ -36,8 +36,10 @@ function Recoleccion  (props) {
                                  </Link>
                          </div>
                          <form>
+                         <div id="busca">
                          <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
                          <button type="button" id="search"><img src={buscar} /></button>
+                         </div>
                          </form>
                 </div>
             <div  className="tabla">

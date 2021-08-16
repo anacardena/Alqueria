@@ -3,8 +3,18 @@
     margin-right:  80%;
 
 }
+.parte_superior{
+    width: auto;
+    height: 180px;
+}
+#btn{
+    margin-left: 70px;
 
-.botonregistro{
+}
+.buscador {
+size: 200px;
+}
+#botonregistro{
     width: 300px;
     height: 60px;
     background-color: #3BC37B;
@@ -13,9 +23,12 @@
      color: #ddd;
     font-family:"Poppins" ;
     border-radius: 20px 20px 20px;
-    border-color:#3BC37B; ;
+    border-color:#3BC37B; 
+    margin-left: 150px;
+    
 
 }
+
 
 .buscador{
     width: 300px;
@@ -48,6 +61,6 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: red;
+    background-color:#F8C346;
     color: white;
-  }  
+  }

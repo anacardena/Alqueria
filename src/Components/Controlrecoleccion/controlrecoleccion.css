@@ -1,46 +1,42 @@
-.litros, .datos {	
-margin: 5%;
-}
-#leche-cantidad{
-background-color: red;
-background-size: contain;
-color: white;
-
-}
-.datos {
-	background-color: #F8C346;
-	background-size: contain;
-	display: grid;
-	grid-template-columns: 50% 50%;
-
-}
-#parteinferior {
-	display: grid;
-	grid-template-columns: 50% 50%;
+.litros {	
+	margin: 5%;
 	
-     justify-content: center;
-     align-items: center;
-}
-#parte_superior img {
-	width: 5vw;
-	height: 10vh;
-}
-.litros button {
-	 background-color: #3BC37B;
-   color: white;
-	  border-radius: 10%;
-   border: none;
-   width: 10vw;
-   height: 7vh;
-}
-#parte_superior {
-	display: flex;
+	}
+	.litros {
+	background-color: red;
+	background-size: contain;
+	color: white;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-
-}
-.columna {
-	background-color: blue;
-	display:grid;
-	grid-template-columns:  1fr;
-    background-size: contain;
-}
+	display: flex;
+	padding: 1%;
+	}
+	
+	
+	#parteinferior {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		 justify-content: center;
+		 align-items: center;
+	}
+	#parte_superior img {
+		width: 5vw;
+		height: 10vh;
+		margin: 5%;
+	}
+	.litros button {
+		 background-color: #3BC37B;
+	   color: white;
+		  border-radius: 10%;
+	   border: none;
+	   width: 10vw;
+	   height: 7vh;
+	}
+	#parte_superior {
+		display: grid;
+		grid-template-columns: 6% 6% 80%;
+		text-align: center;
+		margin: 2%;
+	
+	}

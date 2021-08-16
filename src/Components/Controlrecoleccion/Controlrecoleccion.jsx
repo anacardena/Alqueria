@@ -62,46 +62,59 @@ const [values, setValues] = useState(initialStateValues); //permite alterar el v
       addOrEditCant(values); 
        setValues({...initialStateValues})//una vez guarde los datos se limpie el formulario
     };
-	return (
-		<div id="padre_control"> 
-                   <div id="parte_superior">
-                            <Link to="/Recoleccion" class="btn"><span><img src={atras} /></span></Link>
-                            <Link to="/Inicio" class="btn"><span><img src={inicio} /></span></Link>
-                            <h1> la vaca lola </h1>
-                   </div>
-                    <div id ="parteinferior">
-                                <div className="columna">
-                          
-                                   <div className="datos">
-                                 {cantidad && cantidad.map(cant =>(
-                                  
-                                   <> <div id="fecha"><p>{cant.fecha}</p></div>
+    return (
+      <div id="padre_control"> 
+                     <div id="parte_superior">
+                             <div> <Link to="/Recoleccion" class="btn"><span><img src={atras} /></span></Link></div>
+                              <div><Link to="/Inicio" class="btn"><span><img src={inicio} /></span></Link></div>
+                              <div><h1> la vaca lola </h1> </div>
+                     </div>
+                      <div id ="parteinferior">
+                              <div  className="tabla">
+                                 <table id="customers">
+                                     <tr>
+                                        <th>fecha</th>
+                                        <th>Cantidad</th>
+                                        <th>acciones</th>
+                                     </tr>
+                                      {/*{produccion && produccion.map(cant =>(*/}
+                                     <tr>
+                                       <td>29 / 08 / 2021 </td>
+                                       <td>108</td>
+                                       
+                                       {/* <td>{cant.fecha}</td>
+                                       <td>{cant.numero}</td>*/}
+                                        <td> <button className="botoneliminar" > <img src={borrar}/> </button></td>
+                                       
+                                    </tr>
+                                    <tr>
+                                      <td>16 / 08 / 2021</td>
+                                      <td>85</td>
+                                      <td> <button className="botoneliminar" > <img src={borrar}/> </button></td>
+                                    </tr>
+                                    {/* ))}*/}
+                                 </table>
+  
+                              </div>
                                 
-                                 <div id="cantidad"><p>{cant.numero}</p></div>
-                               <button className="botoneditar"  ><img src={lapiz}/> </button>
-                               <button className="botoneliminar" onClick={() =>onDelete(cant.id)}> <img src={borrar}/> </button>
-                                  </>
-                                  ))
-                                }
-                             </div>
-                           </div>
-                            
-                            <div className="litros"> 
+                              
+                              <div className="litros"> 
+                                   
                                   
-                                 <div id="leche-cantidad"> 
-                                 <form onSubmit={handleSubmit}> //cada vez que usen el formulario quiero que utilicen la función handleSubmit
-                                      <h3>Digita la fecha de hoy</h3>
-                                      <input id="f" name="fecha" type="date" onChange={handleInputChange}  value={values.fecha}/>
-                                       <h3 >¿cuántos litros se produjeron hoy?</h3>
-                                       <input id="numero" name="numero" type="number" onChange={handleInputChange} value={values.numero}/>
-                                  
+                                   <form onSubmit={handleSubmit}>
+                                       <h3>Digita la fecha de hoy</h3>
+                                        <input id="f" name="fecha" type="date" />
+                                         
+                                     
+                                         <h3 >¿cuántos litros se produjeron hoy?</h3>
+                                         <input id="numero" name="numero" type="number"/>
+                                         
+                                          <div><button id="Guardar" type="submit"><strong>Guardar  </strong> </button> </div>
+                                  </form>        
                                  
-                                 <div > <button id="Guardar" type="submit"> Guardar </button>  </div>     
-                                </form>
-                                </div>
-                            </div>
-                  </div>
-      </div>
-		)	
+                              </div>
+                    </div>
+        </div>
+      )
 };
 export default Controlrecoleccion

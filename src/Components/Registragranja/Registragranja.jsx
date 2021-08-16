@@ -19,7 +19,7 @@ function Registragranja (props) {
     className
   } = props;
 
-  const  getGranjas= ()=>{
+  const  getGranjas= () =>{
     const granjas = db.collection("granjas").doc().get()
     console.log(granjas.data) } 
   const [granjas,setGranjas] =useState()
@@ -61,22 +61,7 @@ function Registragranja (props) {
     db.collection("granjas").doc().set(values)
     setValues({...useState})
   }
-  const[currentId, setCurrentId] = useState("");
-  const addOrEditLink = async (LinkObjets) => {
-      if (currentId === ""){
-          await db.collection("granjas").doc().set(LinkObjets)
-          toast('Nueva entrada',{ //Para el coso verde al añadir
-          type: 'success'
-      });
-      }
-      else {
-          await db.collection('links').doc(currentId).update(LinkObjets)
-          toast('Actualizado',{ //Para el coso verde al añadir
-              type: 'info'
-          });
-          setCurrentId('')
-      }
-  };
+  
   const  toggle = () => setModalRegistro(!modal);
   const  togglEditar = () => setModalEditar(!modaleditar);
   
@@ -105,11 +90,11 @@ function Registragranja (props) {
       <div id="padre_registro">
 
         <div className="parte_superior">
-          <Link to="/Inicio" class="btn">
+          <Link to="/Inicio" id="btn">
           <span><img src={atras} /></span>
 
           </Link>
-          <Button className="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
+          <Button id="botonregistro"  onClick={toggle}>{buttonLabel}Registro </Button>
 
           <div className="buscador">
           <input type="text" id="searchterm" placeholder="digite el nombre de la granja" />
