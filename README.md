@@ -1,4 +1,7 @@
 ALQUERIA
+
+
+
 ”trabajamos con el corazón para transformar vidas en el campo”.
 
 hola a todos este es un proyecto realizado  a corde  a la página original de la empresa Alquería, desarrollado por Ana Cárdenas y Johana Roa. 
