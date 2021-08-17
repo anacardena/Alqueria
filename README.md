@@ -7,11 +7,13 @@ ALQUERIA
 hola a todos este es un proyecto realizado  a corde  a la página original de la empresa Alquería, desarrollado por Ana Cárdenas y Johana Roa. 
 
 Lenguajes:
+
 -HTML
 -css
 -JAVASCRIPT
 
 Base de datos:
+
 -FIREBASE
 
 Biblioteca de código abierto: React 
